@@ -15,13 +15,12 @@ public class InsertionSort {
 		InsertionSort sort2 = new InsertionSort();
 		sort2.sortItems(B);
 		printAnswer(B);
-		
 		//array C
 		InsertionSort sort3 = new InsertionSort();
 		sort3.sortItems(C);
 		printAnswer(C);
+		
 	}
-	
 	//insertion sort
 	public void sortItems(int arr[]){
 		int size = arr.length; //store size of the array
@@ -37,8 +36,8 @@ public class InsertionSort {
 			}
 			arr[temp+1] = value; //allocate the value in the new index of temp+1
 		}
+				
 	}
-	
 	//print utility method
 	public static void printAnswer(int arr[]){
 		int size = arr.length;
