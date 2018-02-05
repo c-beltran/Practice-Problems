@@ -5,12 +5,11 @@ public class WordLength {
 		WordLength word1 = new WordLength();
 		WordLength word2 = new WordLength();
 		System.out.println("Count of the first word: " + word1.lengthOfLastWord("New York"));
-		System.out.println("Count of the first word: " + word2.lengthOfLastWord("testing double space-  "));
+		System.out.println("Count of the first word: " + word2.lengthOfLastWord("testing double space  "));
 	}
 	
 	public int lengthOfLastWord(String word){
 		int wordCount=0;
-		//trim() deleted the spaces that are before and after a word
 		String givenWord = word.trim();
 		for(int i=0; i<givenWord.length(); i++){
 			if(givenWord.charAt(i) == ' '){

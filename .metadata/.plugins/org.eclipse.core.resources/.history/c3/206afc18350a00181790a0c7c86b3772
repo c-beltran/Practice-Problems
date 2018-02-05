@@ -10,7 +10,6 @@ public class WordLength {
 	
 	public int lengthOfLastWord(String word){
 		int wordCount=0;
-		//trim() deleted the spaces that are before and after a word
 		String givenWord = word.trim();
 		for(int i=0; i<givenWord.length(); i++){
 			if(givenWord.charAt(i) == ' '){
