@@ -12,4 +12,17 @@
 		<list key="textArray">
 		</list>
 	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.ZipFile" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/Users/Carlos/Desktop/Spring2018/RV/CS 323/CS 323 Spring 2017/Previous stuff helpful/CSCI323_HW/Ngawang_Tenzin_CSCI323_HomeWork1.zip"/>
+			<item value="/Users/Carlos/Desktop/Spring2018/RV/CS 323/CS 323 Fall 2017/Assignments/Assignment #1/CS 323 Assignment # 1.zip"/>
+		</list>
+	</section>
 </section>

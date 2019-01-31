@@ -1,8 +1,15 @@
 
 public class MergeSortAlgo {
 	public static void main(String[] Args){
-		MergeSortAlgo list1 = new MergeSortAlgo();
-		MergeSortAlgo list2 = new MergeSortAlgo();
+
+		int arr[] = {12, 11, 13, 5, 6, 7};
+		System.out.println("given array");
+		printfunc(arr, arr.length);
+//		MergeSortAlgo list1 = new MergeSortAlgo();
+//		MergeSortAlgo list2 = new MergeSortAlgo();
+//		int arr_size = arr.length/arr[0];
+//		
+//		list1.mergeSort(arr, 0, arr_size -1);
 	}
 	
 	public void mergeSort(int[] list, int lowIndex, int highIndex){
@@ -15,7 +22,7 @@ public class MergeSortAlgo {
 			mergeSort(list, lowIndex, midIndex);
 			//call mergeSort on the second half of list
 			mergeSort(list, midIndex, highIndex);
-			
+			merge(list, lowIndex, midIndex, highIndex);
 		}
 	}
 	
@@ -65,5 +72,13 @@ public class MergeSortAlgo {
 			j++;
 			k++;
 		}
+	}
+	
+	//print function
+	public static void printfunc(int arr[], int size){
+		for(int i=0; i<arr.length; i++){
+			System.out.println("%d" + arr[i]);
+		}
+		System.out.println();
 	}
 }

@@ -1,0 +1,5 @@
+Carlos Alberto 
+
+Total number of times counter line was executed: 46
+Quick Sorted(Num16.txt): 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
