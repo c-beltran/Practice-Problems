@@ -57,7 +57,7 @@ public class CarPart {
 			System.out.println("Fuel tank needs replacement.");
 		}
 		else if(interiorStatus <= 10){
-			System.out.println("The interior needs replacement.");
+			System.out.println("One or more interior parts needs replacement.");
 		}
 		else{
 			System.out.println("**The car has stopped working due to one or more broken parts**");
