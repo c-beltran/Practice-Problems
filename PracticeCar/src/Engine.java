@@ -11,21 +11,26 @@ public class Engine extends CarPart {
 		System.out.println("Engine function is to provide the suficient power to make car do work.");
 		
 	}
-
-	@Override
-	public void status() {
-		if(engineStart == true){
-			int wearAndTear = 25;
-			engineStatus = engineStatus - wearAndTear;
-		}
-		System.out.println("Engine has about " + engineStatus + "%" + " of life remaining.");
-		
-	}
-
+	
 	@Override
 	public void carPartInMotion() {
 		engineStart = true;
 		System.out.println("Engine is running...");
 	}
 
+	@Override
+	public void status() {
+		if(engineStart == true){
+			int wearAndTear = 25;
+			engineStatus = engineStatus - wearAndTear;
+			System.out.println("Engine has about " + engineStatus + "%" + " of life remaining.");
+		}
+		else if(engineStatus <= 25){
+			System.out.println("Engiine needs service.");
+		}
+		else{
+			System.out.println("Engine has failed...");
+			engineStart = false;
+		}
+	}
 }
