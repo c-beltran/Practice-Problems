@@ -22,7 +22,7 @@ public class FuelTank extends CarPart {
 			int wearAndTear = 25;
 			transmissionStatus = transmissionStatus - wearAndTear;
 			fuelLevel = fuelLevel - wearAndTear;
-			System.out.println("Fuel tank has about " + fuelDistribution + "%" + " of life remaining.");
+			System.out.println("Fuel tank has about " + fuelLevel + "%" + " of life remaining.");
 		}
 		else if(transmissionStatus <= 25){
 			System.out.println("Fuel tank needs to be refilled.");
