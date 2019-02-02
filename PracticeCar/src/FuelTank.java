@@ -3,6 +3,7 @@ public class FuelTank extends CarPart {
 	
 	int fuelLevel = 100;
 	boolean fuelDistribution = false;
+	boolean partFailed = false;
 
 	@Override
 	public void function() {
@@ -18,20 +19,22 @@ public class FuelTank extends CarPart {
 
 	@Override
 	public void status() {
-		if(fuelDistribution == true){
-			int wearAndTear = 25;
-			transmissionStatus = transmissionStatus - wearAndTear;
-			fuelLevel = fuelLevel - wearAndTear;
-			System.out.println("Fuel tank has about " + fuelLevel + "%" + " of life remaining.");
-		}
-		else if(transmissionStatus <= 25){
-			System.out.println("Fuel tank needs to be refilled.");
+		if(partFailed == false){
+			if(fuelDistribution == true){
+				int wearAndTear = 25;
+				fuelTankStatus = fuelTankStatus - wearAndTear;
+				fuelLevel = fuelLevel - wearAndTear;
+				System.out.println("Fuel tank has about " + fuelLevel + "%" + " of life remaining.");
+			}
+			if(fuelTankStatus <= 25){
+				System.out.println("Fuel tank needs to be refilled.");
+			}
+			if(fuelTankStatus <= 0){
+				partFailed = true;
+			}
 		}
 		else{
-			System.out.println("Fuel tank is empty...");
-			fuelDistribution = false;
+			System.out.println("FUEL TANK IS EMPTY");
 		}
-		
 	}
-
 }

@@ -4,6 +4,7 @@ public class Engine extends CarPart {
 	int tempInCelsius = 90;
 	String oilType = "0W30";
 	boolean engineStart = false;
+	boolean partFailed = false;
 	
 	
 	@Override
@@ -20,17 +21,21 @@ public class Engine extends CarPart {
 
 	@Override
 	public void status() {
-		if(engineStart == true){
-			int wearAndTear = 25;
-			engineStatus = engineStatus - wearAndTear;
-			System.out.println("Engine has about " + engineStatus + "%" + " of life remaining.");
-		}
-		else if(engineStatus <= 25){
-			System.out.println("Engiine needs service.");
+		if(partFailed == false){
+			if(engineStart == true){
+				int wearAndTear = 25;
+				engineStatus = engineStatus - wearAndTear;
+				System.out.println("Engine has about " + engineStatus + "%" + " of life remaining.");
+			}
+			if(engineStatus <= 25){
+				System.out.println("Engine needs service.");
+			}
+			if(engineStatus <= 0){
+				partFailed = true;
+			}
 		}
 		else{
-			System.out.println("Engine has failed...");
-			engineStart = false;
+			System.out.println("ENGINE HAS FILED");
 		}
 	}
 }

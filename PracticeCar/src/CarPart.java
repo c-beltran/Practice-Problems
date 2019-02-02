@@ -8,9 +8,7 @@ public abstract class CarPart implements Functional {
 	public static int wheelStatus = 100;
 	
 	public abstract void function();
-	
 	public abstract void carPartInMotion();
-	
 	//method that prints the condition of the part to the console
 	public abstract void status();	
 }

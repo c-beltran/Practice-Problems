@@ -5,6 +5,7 @@ public class Wheels extends CarPart {
 	int tireSize = 17;
 	String tireType = "Yokohama";
 	boolean tireInMotion = false;
+	boolean partFailed = false;
 	
 	@Override
 	public void function() {
@@ -19,19 +20,21 @@ public class Wheels extends CarPart {
 
 	@Override
 	public void status() {
-		if(tireInMotion == true){
-			int wearAndTear = 25;
-			wheelStatus = wheelStatus - wearAndTear;
-			System.out.println("Wheels has about " + wheelStatus + "%" + " of life remaining.");
-		}
-		else if(wheelStatus <= 25){
-			System.out.println("Wheels need service.");
+		if(partFailed == false){
+			if(tireInMotion == true){
+				int wearAndTear = 25;
+				wheelStatus = wheelStatus - wearAndTear;
+				System.out.println("Wheels has about " + wheelStatus + "%" + " of life remaining.");
+			}
+			if(wheelStatus <= 25){
+				System.out.println("Wheels need service.");
+			}
+			if(fuelTankStatus <= 0){
+				partFailed = true;
+			}
 		}
 		else{
-			System.out.println("Wheels need to be replaced...");
-			tireInMotion = false;
+			System.out.println("WHEELS NEED TO BE REPLACED");
 		}
-		
 	}
-
 }
