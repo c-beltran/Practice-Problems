@@ -22,7 +22,7 @@ public class Transmission extends CarPart {
 		if(transInMotion == true){
 			int wearAndTear = 25;
 			transmissionStatus = transmissionStatus - wearAndTear;
-			System.out.println("Transmission has about " + engineStatus + "%" + " of life remaining.");
+			System.out.println("Transmission has about " + transmissionStatus + "%" + " of life remaining.");
 		}
 		else if(transmissionStatus <= 25){
 			System.out.println("Transmission needs service.");
