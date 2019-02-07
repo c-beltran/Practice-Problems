@@ -24,6 +24,7 @@ public class Simulator {
 					System.out.println("\n-Car has been turned off-");
 				}
 				else{
+					System.out.println("programs ended...");
 					System.exit(0);
 				}
 			}
